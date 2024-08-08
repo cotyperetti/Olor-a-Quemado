@@ -13,38 +13,102 @@ header {
     height: 8.125rem;
     width: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content:flex-end;
+    justify-content: space-between;
+
     
 }
 
-.logo{
-    margin-right: auto;    
-}
 
-.logo img{
-    height: 9.375rem;
+
+
+
+
+
+.logo{
+    
+    object-fit: contain;    
     width: 9.375rem;
     margin-left: .625rem;
     margin-top: .625rem;
+    
+}
+
+.logo img{
+    
+    width: 100%;
+    
+    
 }
 
 .navbar{
+    display: flex;
+    padding-right: 1.25rem;
+    margin-right: 1.25rem;
     list-style: none;
-    top: 1.875rem;
-    margin-top: 3.125rem;
+    align-items: center;
+
+}
+
+
+.navbar li {
+    
+    
+    margin-top: .3125rem;
+    font-size: 1.25rem;
+    padding: 1.25rem;
     
     
     
 }
 
-.navbar ul li {
+@media (max-width:768px) {
+
+    .navbar{
+        padding-right: .0625rem
     
-    display: inline-block;
-    margin-right: 1.25rem;
+    }
+    
+    .navbar li a{
+        font-size: 1rem;    
+        
+    }
     
     
+    }
+
+@media (max-width:320px) {
+
+    header{
+        height: 18.75rem;
+        
+    }
+
+    nav{
+        height: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0rem;
+        height: 100%;
+        font-size: 1rem;
+        
+
+    }
+
+    .navbar li{
+        
+        padding: .125rem;
+        line-height: 1.5625rem
+    }
+
+    .logo{
+        width: 4.6875rem;
+
+    }
+
     
 }
 
@@ -376,19 +440,15 @@ margin-bottom: 3.125rem;
 footer{
     background: #527853;
     height: 15.625rem;
-    display: grid;
-    grid-template-columns: 10% 10% 40% 40% ;
-    grid-template-rows: 3.125rem 3.125rem 3.125rem 6.25rem;
-    grid-template-areas: 
+    display: flex;
+    position: relative;
     
-    's1 s2 . s4'
-    '. . . s4'
-    '. . . s4'
-    '. . s3 s4'
     
-    ;
+    
     
 }
+
+
 
 .footerdiv1{
 grid-area: s1;
@@ -401,6 +461,12 @@ height: 11.25rem;
 
 }
 
+
+
+
+
+
+
 .footerdiv1 h4{
     color:#F9E8D9;
     padding: 1.25rem;
@@ -409,7 +475,7 @@ height: 11.25rem;
 
 
 .footerdiv2{
-grid-area: s2;
+
 justify-content: flex-start;
 align-items: center;
 height: 11.25rem;
@@ -422,29 +488,48 @@ flex-direction: column;
     padding: 1.25rem;
 }
 
-footer p{
-grid-area: s3;
-}
+
 
 .tortilla{
-    grid-area: s4;
-    height: 15.625rem;
+    
     width: 15.625rem;
-    object-fit: contain;
-    grid-column: 4 / 5;
-    grid-row: 1 / 5;
     position: absolute;
-    right: 0rem;
-    
-    
+    right: .125rem;
     
 }
+
+@media (max-width:768px) {
+    
+    
+    .tortilla{
+        width: 12.5rem;
+        margin-bottom: auto
+        
+    }
+    
+    }
+
+@media (max-width:320px) {
+    
+    footer{
+        height: 18.75rem;
+    }
+    
+    .tortilla{
+        width: 9.375rem;
+        bottom: .3125rem;
+        right: 1.25rem;
+        
+    }
+    
+    }
+
+
 
 .iconofb{
     height: 1.875rem;
     width: 1.875rem;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+
     margin: .3125rem;
     
 }
@@ -452,8 +537,7 @@ grid-area: s3;
 .iconoin{
     height: 1.875rem;
     width: 1.875rem;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    
     margin: .3125rem;
     
 }
@@ -461,8 +545,7 @@ grid-area: s3;
 .iconogm{
     height: 1.875rem;
     width: 1.875rem;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    
     margin: .3125rem;
     
 }
@@ -985,6 +1068,22 @@ grid-area: s3;
 
 }
 
+@media (max-width:320px){
+
+.utensillos-section1 h1{
+    font-size: 2rem;
+}
+
+.utensillos-section2 p{
+    font-size: 1rem;
+    padding: 1.25rem;
+}
+
+.utensillos-section2{
+    min-height: 21.875rem;
+}
+}
+
 .utensillos-section2{
     height:300px;
     background-image: url(../Assets/pasta.jpg);
@@ -999,6 +1098,7 @@ grid-area: s3;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left bottom;
+    position: relative;
     
 }   
 
@@ -1006,6 +1106,8 @@ grid-area: s3;
     color: #D9D9D9;
     font-size: 1.25rem;
     text-align: center;
+    position: absolute;
+    top: 1.25rem;
 
 }
 
@@ -1052,7 +1154,306 @@ grid-area: s3;
 
 }
 
-.container-utensillos p{
-    color
+@media (max-width:320px){
+
+    .container-utensillos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-utensillos h2{
+        margin: .1875rem;
+}
+    .utensillos-img {
+        width: 7.5rem;
+        
+
+}
+    .div-utensillos {
+    width: 100%;
+
+    }
+
+
+
+
 }
 
+
+.inspiracion-section1{
+    height: 31.25rem;
+    background: rgb(238,114,20);
+    background: linear-gradient(90deg, rgba(238,114,20,1) 0%, rgba(247,183,135,1) 35%, rgba(249,232,217,1) 100%);
+    margin-bottom: -6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+
+}
+
+.inspiracion-section1 h1{
+    font-family: 'Platypi';
+    font-size: 5rem;
+    color:#060606;
+    text-shadow: .125rem .125rem grey;
+    position:relative;
+    top: 3.125rem;
+    
+
+}
+
+.inspiracion-section1 p{
+    position: relative;
+    bottom: -70px;
+    left: 3.125rem;
+    width: 90%;
+
+}
+
+@media (max-width:768px){
+
+    .inspiracion-section1 h1{
+        font-size: 3.125rem ;
+    } 
+
+    .inspiracion-section1 p{
+        left: 0rem;
+        bottom: -90px;
+    }
+
+}
+
+@media (max-width:320px){
+
+    .inspiracion-section1 h1{
+        font-size: 1.875rem;
+        margin-left: .625rem;
+    } 
+}
+
+
+
+
+.inspiracion-section2{
+    background-image: url(../Assets/background-verde.png);
+    margin-top: 0rem;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    margin-bottom: -6.25rem;
+    
+}
+
+.container-inspiracion{
+    height: 18.75rem;
+    width: 80%;
+    margin-bottom: 6.25rem;
+    margin-left: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-chef img{
+    margin-top: 1.875rem;
+    border: .125rem solid  rgb(66, 135, 66);
+    object-fit: contain;
+    
+}
+
+.div-chef h2{
+    font-size: 1.875rem;
+}
+
+.container-inspiracion p{
+
+    width: 50%;
+    height:12.5rem;
+    background-color:#F9E8D9;
+    padding: 3.125rem;
+    border: 1px solid rgb(175, 173, 173);
+    border-radius: 5%;
+    box-shadow: 2px 2px .3125rem rgb(193, 192, 192);
+
+
+}
+
+@media (max-width:768px){
+
+    .container-inspiracion{
+        height: 16.875rem;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto;
+        margin-bottom: 1.875rem;
+    } 
+
+    .div-chef{
+
+        height: 15.625rem;
+    }
+
+    .div-chef h2{
+        font-size: 1.25rem;
+    }
+
+    .div-chef img{
+        width: 12.5rem;
+    }
+
+    .container-inspiracion p{
+        
+        padding-top: .1875rem;
+        top: 3.4375rem    }
+
+
+
+
+    
+
+}
+
+@media (max-width:320px){
+
+
+
+    .container-inspiracion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-bottom: 1.875rem;
+        margin-top: 1.875rem;
+        height: 34.375rem;
+        width: 100%;
+    }
+
+    .container-inspiracion p{
+        width: 96%;
+        height: 15.625rem;
+        font-size: 1rem;
+        position: ;
+    }
+
+
+
+
+}
+
+.tecnicas-section1{
+    height: 25rem;
+    background-color: #EE7214;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tecnicas-section1 h1{
+    font-size: 5rem;
+}
+
+.indice{
+    border: 1px solid rgb(131, 128, 128);
+    box-shadow: .125rem .125rem .3125rem grey;
+    background-color: rgb(209, 201, 201);
+    height: 22.5rem;
+    width: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem;
+    margin: 3.125rem;
+}
+
+
+.indice h2{
+    margin-left: 2.5rem;
+}
+
+.indice ol{
+    margin-left: 1.25rem;
+    line-height: 1.5625rem
+}
+
+.tecnicas-section2{
+    position: relative;
+    height: 43.75rem;
+
+}
+
+.huevos-png{
+    position: absolute;
+    right: 18.75rem;
+    top: .125rem;
+    height: 25rem;
+    width: 25rem;
+}
+
+.huevos-png img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.cuchara-png{
+    position: absolute;
+    right: -4.375rem;
+    top: 11.25rem;
+    
+    height: 25rem;
+    width: 31.25rem;
+    
+}
+
+.cuchara-png img{
+    height: 100%;
+    width: 100%;
+
+}
+
+.tecnicas-section3{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5000px
+}
+
+.container-tecnicas{
+    height: 28.125rem;
+    border:3px solid black;
+    
+    
+    width: 100%;
+}
+
+.div-tecnicas1{
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+    background-image: url(../Assets/hervir.png);
+    background-size: contain;
+
+}
+
+.div-tecnicas1 h2{
+    position:relative;
+    top:3.75rem;
+    left: 6.25rem;
+    font-size: 3.125rem;
+    color:#D9D9D9
+}
+
+.div-parrafo1{
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+    background-color: #527853;
+
+}
+
+.div-parrafo1 p{
+    position: relative;
+    top:6.25rem;
+
+}
