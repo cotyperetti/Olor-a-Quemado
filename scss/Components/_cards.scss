@@ -1,0 +1,24 @@
+.tip1{
+    width: 12.5rem;
+    border: .0625rem grey;
+    border-radius: 5%;
+    box-shadow: .3125rem .3125rem .3125rem grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6c294;
+    img{
+        width: 4.375rem;
+    }
+    h4{
+        text-decoration-line: underline;
+        margin-top: .3125rem;
+    }
+    p{
+        margin-top: 3.125rem;
+        margin-left: .3125rem;
+        margin-right: .3125rem;
+        text-align: center;
+        color: rgb(49, 48, 48);
+    }
+}

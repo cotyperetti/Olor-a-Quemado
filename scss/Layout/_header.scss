@@ -1,0 +1,49 @@
+header{
+    background-color: map-get($colores ,color1);
+    height: 8.125rem;
+    width: 100%;
+    @include flex (row,nowrap,space-between,center,none);
+
+    
+    
+    div{
+    object-fit: contain;    
+    width: 9.375rem;
+    margin-left: .625rem;
+    margin-top: .625rem;
+    img{
+        width: 100%;
+    }};
+    nav{
+        ul{
+            @include flex (row,nowrap,none,center,none);
+            padding-right: 1.25rem;
+            margin-right: 1.25rem;
+            list-style: none;
+            li{
+                margin-top: .3125rem;
+                font-size: 1.25rem;
+                padding: 1.25rem;
+                
+                
+                    a{color: #fbfbfb;
+                        }
+                    
+                    a:link {
+                        text-decoration: none;
+                        /*&:hover{
+                            transform: scale(1.2)};*/
+                        }
+                        
+                    
+                    }
+                    
+                    a:visited{
+                        text-decoration: none;
+                    }
+
+                    }
+            }
+        }
+
+    

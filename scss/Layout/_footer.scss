@@ -1,0 +1,61 @@
+footer{
+    background-color: map-get($colores ,color1);
+    height: 15.625rem;
+    position: relative;
+    @include flex (row,nowrap,flex-start,center,none);
+    
+    
+        .footerdiv1{
+            @include flex (column,nowrap,flex-start,center,none);
+            height: 11.25rem;
+            width: 20%;
+            
+            h4{
+                color:#F9E8D9;
+                padding: 1.25rem;
+            };
+            
+            .iconofb{
+                height: 1.875rem;
+                width: 1.875rem;
+                margin: .3125rem;
+                
+            };
+            
+            .iconoin{
+                @extend .iconofb;
+                
+            };
+            
+            
+        };
+        .footerdiv2{
+            @include flex (column,nowrap,flex-start,center,none);
+            height: 11.25rem;
+            width: 20%;
+                h4{
+                    color:#F9E8D9;
+                    padding: 1.25rem;
+                };
+                .iconogm{
+                    height: 1.875rem;
+                    width: 1.875rem;
+                    margin: .3125rem;
+                    
+                };
+
+            };
+
+        .tortilla{
+                width: 15.625rem;
+                position: absolute;
+                right: .125rem;
+                img{
+                    object-fit: contain;
+                    width: 100%;
+                }
+                
+            }
+
+
+    }

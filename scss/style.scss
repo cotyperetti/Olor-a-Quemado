@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+@import "./Utilities/variables";
+@import "./Utilities/mapas";
+@import "./Utilities/mixins";
+
+@import "./Base/reset";
+
+@import "./Layout/header";
+@import "./Layout/footer";
+
+
+
+
+
+
+.section1{
+    @include background-image(no-repeat,cover,top center,contain);
+    background-image: url(../Assets/Tomates.png);
+    height: 100vh;
+    margin: 0rem;
+    @include flex (row,nowrap,center,center,0rem);
+    .olor{
+        color: #D9D9D9;
+        font-family: 'Platypi';
+        font-size: 8.125rem;
+        text-align: center;
+        text-shadow: .125rem .125rem grey;
+        margin-top: -7.8125rem;
+        
+    }
+    
+    
+}
+
+.section2{
+    background-image: url(../Assets/tabla1.jpg);
+    height: 25rem;
+    @include background-image(no-repeat,cover,left bottom,contain);
+    @include flex(column,none,none,none,0px);
+    h2{ 
+        color:map-get($colores,color3);
+        font-size: 3.75rem;
+        text-align: center;
+        padding: 1.5625rem;
+        letter-spacing: .3125rem;
+        text-shadow: .125rem .125rem rgb(31, 31, 31);
+        };
+    h3{
+        color:map-get($colores,color4);
+        font-size: 1.875rem;
+        text-align:start;
+        text-shadow: .125rem .125rem rgb(31, 31, 31);
+        margin-left: 5%;
+    };
+    p{
+        color:map-get($colores,color4);
+        padding-top: .625rem;
+        font-size: 1.4375rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 3.125rem;
+
+    }
+
+}   
+
+.section3{
+    @include flex(row,wrap,center,center,0rem);
+    img{
+        width: 50%;
+        height: 100%;
+    }
+    
+}
+
+/* corregir img hamburguesa*/
+
+.section4{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 12.5rem 31.25rem 31.25rem 15.625rem 6.25rem;
+    grid-template-areas: 
+    
+    's1 s2 s3'
+    's4 s4 s4'
+    's4 s4 s4'
+    's4 s4 s4'
+    's5 . .'
+    
+    ;
+    margin-bottom: 6.25rem;
+    .aji{
+            grid-area: s1;
+            justify-self: center;
+            align-self: baseline;
+            height: 16.875rem;
+            width: 16.875rem;
+            
+            }
+    h3{
+        grid-area: s2;
+        justify-self: center;
+        align-self: center;
+        font-size: 3.125rem;
+        color:#527853;
+        text-shadow: .0625rem .0625rem rgb(199, 197, 197);
+        };
+    .especias{
+        grid-area: s3;
+    };
+    .motivos{
+        grid-area: s4;
+        background-color:map-get($colores,color4 );
+        margin-top: 3.125rem;
+        margin-bottom: 3.125rem;
+        padding: 1.25rem;
+        li{
+            padding: 36px 0 36px 84px;
+            list-style: none;
+            background-image: url("../Assets/iconozanahoria.png");
+            @include background-image(no-repeat, 2.5rem, left center, none);
+        }
+    };
+
+    .tenedor{
+        width: 25rem;
+        height: 7.8125rem;
+        grid-area: s5;
+        
+    };
+
+    }
+
+.section5{
+    width: 100%;
+    height: 25rem;
+    padding-bottom: 3.125rem;
+    margin-top: 4.375rem;
+    margin-bottom: 3.125rem;
+    h3{
+        font-size: 3.125rem;
+        color:#527853;
+        text-shadow: .0625rem .0625rem rgb(199, 197, 197); 
+        height: 6.25rem;
+        text-align: center
+
+    }
+    .tips{
+        @include flex(row,wrap,space-evenly,center,0rem);
+    .tip1{
+            width: 12.5rem;
+            height: 18.75rem;
+            border: .0625rem grey;
+            border-radius: 5%;
+            box-shadow: .3125rem .3125rem .3125rem grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            img{
+                width: 2.5rem;
+                padding: .3125rem
+            };
+            h4{
+                text-decoration-line: underline;
+                margin-top: .3125rem;
+            };
+            p{
+                margin-top: 3.125rem;
+                margin-left: .3125rem;
+                margin-right: .3125rem;
+                text-align: center;
+                color: rgb(49, 48, 48);
+            };
+        }
+
+    .tip2{
+        @extend .tip1;
+    }
+    .tip3{
+        @extend .tip1;
+    }
+    .tip4{
+        @extend .tip1;
+    }
+    }
+}
+
+.recetassection1{
+    height: 25rem;
+    background-image: url(../Assets/tostadas.png);
+    @include background-image (no-repeat,top,auto,none);
+    h1{
+        font-family: 'Platypi';
+        font-size: 7.5rem;
+        text-align: center;
+        color: rgb(34, 33, 33);
+        text-shadow: .125rem .125rem grey;
+        position: absolute;
+        top: 14.375rem;
+        left: 23.125rem
+    }
+}
+
+.cositas{
+    .recetas-h2{
+        color: #EE7214;
+        font-size: 3.125rem;
+        text-align: center;
+        margin: 6.25rem;
+        text-shadow: .125rem .125rem rgb(168, 168, 168);
+    }
+    .container-cards-cositas{
+        @include flex(row,wrap,space-around,center,0rem);
+        .humus{
+            width: 12.5rem;
+            height: 18.75rem;
+            border: .0625rem grey;
+            box-shadow: .3125rem .3125rem .3125rem grey;
+            text-align: center;
+            h3{
+                padding: .1875rem;
+                color: #527853;
+                text-decoration: underline;
+            }
+            p{
+                text-align: center;
+                margin-top: .9375rem;
+                font-weight: 100;
+            }
+            div{
+                width: 100%;
+            height: 50%;
+            margin-top: 2rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        };
+        .papas-bravas{
+            @extend .humus
+        };
+        .chips-kale{
+            @extend .humus
+        };
+        .bruschettas{
+            @extend .humus
+        }
+}
+}
+
+.salados{
+    .recetas-h2{
+        color: #EE7214;
+        font-size: 3.125rem;
+        text-align: center;
+        margin: 6.25rem;
+        text-shadow: .125rem .125rem rgb(168, 168, 168);
+    };
+    .container-cards-salados{
+        @include flex(row,wrap,space-around,center,0rem);
+        .salsa-bolognesa{
+                @extend .humus
+            };
+        .arroz-verduras{
+                @extend .humus
+            };
+        .milanesas-pure{
+                @extend .humus
+            };
+        .tarta-atun{
+                @extend .humus
+            }
+    }
+}
+
+
