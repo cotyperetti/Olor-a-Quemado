@@ -13,3 +13,12 @@
     background-position: $position;
     object-fit: $fit;
 }
+
+@mixin recetas-h2 {
+        color: #EE7214;
+        font-size: 3.125rem;
+        text-align: center;
+        margin: 6.25rem;
+        text-shadow: .125rem .125rem rgb(168, 168, 168);
+}
+

@@ -1,0 +1,73 @@
+@media (max-width:1024px){
+    .tecnicas-section2{
+        .huevos-png{
+            left:30rem;
+            width: 21.875rem ;
+        }
+        .cuchara-png{
+            left: 28.125rem;
+            width: 9.375rem;
+            img{
+                width: 35rem;
+            }
+        }}
+        .tecnicas-section3{
+            .container-tecnicas{
+                    height: 480px;
+                    .div-saltear{
+                        h2{
+                            left: 0rem;
+                            width: 25rem;
+                        }}
+                    .div-blanquear{
+                        h2{
+                            left: .3125rem;
+                            font-size: 3.75rem;
+                        }}
+                    .div-gratinar{
+                        h2{
+                            left: .3125rem;
+                            width: 25rem;
+                        }}
+                    .div-hornear{
+                        h2{
+                            left: .125rem;
+                            top:0rem;
+                            width: 25rem;
+                        }}
+                    .div-brasear{
+                        h2{
+                            left: 3.125rem;
+                        }}
+                    .div-vapor{
+                        h2{
+                            left: 0rem;
+                            width: 25rem;
+                        }}
+                    .div-guisar{
+                        h2{
+                            left: 0rem;
+                            width: 25rem;
+                        }}
+                    .parrafo-hervir{
+                        p{
+                            font-size: 1.25rem;
+                        }}}}
+                    }
+
+
+                    @media (max-width:1024px){
+                        .inspiracion-section2{
+                            .container-inspiracion{
+                                @include flex(row,nowrap,space-between,center,6rem);
+                                p{
+                                    width: 70%;
+                                    padding: 1.25rem ;
+                                }
+                            }
+                        }
+
+
+
+
+                    }

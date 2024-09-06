@@ -1,9 +1,3 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    
-}
 
 @import "./Utilities/variables";
 @import "./Utilities/mapas";
@@ -13,6 +7,8 @@
 
 @import "./Layout/header";
 @import "./Layout/footer";
+
+
 
 
 
@@ -32,11 +28,46 @@
         text-align: center;
         text-shadow: .125rem .125rem grey;
         margin-top: -7.8125rem;
+
+        -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                @-webkit-keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                            transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
+                }
+                @keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    00% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
         
     }
+    @keyframes wipe-in-right {
+        from {
+        clip-path: inset(0 100% 0 0);
+        }
+        to {
+        clip-path: inset(0 0 0 0);
+        }}
+        [transition-style="in:wipe:right"] {
+        animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;}
     
-    
-}
+}}
 
 .section2{
     background-image: url(../Assets/tabla1.jpg);
@@ -71,17 +102,21 @@
 }   
 
 .section3{
-    @include flex(row,wrap,center,center,0rem);
-    img{
+    @include flex(row,nowrap,center,center,0rem);
+    div{
         width: 50%;
-        height: 100%;
+        img{
+            width: 100%;
+            object-fit: fill;
+        }
     }
     
 }
 
-/* corregir img hamburguesa*/
+
 
 .section4{
+    margin-top: 3.125rem;
     display: grid;
     grid-template-columns: 30% 40% 30%;
     grid-template-rows: 12.5rem 31.25rem 31.25rem 15.625rem 6.25rem;
@@ -113,6 +148,7 @@
         };
     .especias{
         grid-area: s3;
+        width: 18.75rem;
     };
     .motivos{
         grid-area: s4;
@@ -195,26 +231,49 @@
 .recetassection1{
     height: 25rem;
     background-image: url(../Assets/tostadas.png);
-    @include background-image (no-repeat,top,auto,none);
-    h1{
-        font-family: 'Platypi';
-        font-size: 7.5rem;
-        text-align: center;
-        color: rgb(34, 33, 33);
-        text-shadow: .125rem .125rem grey;
-        position: absolute;
-        top: 14.375rem;
-        left: 23.125rem
-    }
-}
+    @include background-image (no-repeat,cover,right,none);
+    @include flex (row,nowrap,center,center,0rem);
+    div{
+        h1{
+            font-family: 'Platypi';
+            font-size: 7.5rem;
+            text-align: center;
+            color: rgb(34, 33, 33);
+            text-shadow: .125rem .125rem grey; 
+
+            -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                @-webkit-keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
+                }
+                @keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
+        }}
+}}
 
 .cositas{
+    margin-bottom: 3.125rem;
     .recetas-h2{
-        color: #EE7214;
-        font-size: 3.125rem;
-        text-align: center;
-        margin: 6.25rem;
-        text-shadow: .125rem .125rem rgb(168, 168, 168);
+        @include recetas-h2
     }
     .container-cards-cositas{
         @include flex(row,wrap,space-around,center,0rem);
@@ -224,6 +283,9 @@
             border: .0625rem grey;
             box-shadow: .3125rem .3125rem .3125rem grey;
             text-align: center;
+            &:hover{
+                scale: (1.1);
+            }
             h3{
                 padding: .1875rem;
                 color: #527853;
@@ -252,33 +314,540 @@
         };
         .bruschettas{
             @extend .humus
-        }
+        };
 }
 }
 
 .salados{
     .recetas-h2{
-        color: #EE7214;
-        font-size: 3.125rem;
-        text-align: center;
-        margin: 6.25rem;
-        text-shadow: .125rem .125rem rgb(168, 168, 168);
+        @include recetas-h2
     };
     .container-cards-salados{
         @include flex(row,wrap,space-around,center,0rem);
-        .salsa-bolognesa{
-                @extend .humus
+            .salsa-bolognesa{
+                width: 12.5rem;
+                height: 18.75rem;
+                border: .0625rem grey;
+                box-shadow: .3125rem .3125rem .3125rem grey;
+                text-align: center;
+                &:hover{
+                scale: (1.1);}
+                h3{
+                    padding: .1875rem;
+                    color: #527853;
+                    text-decoration: underline;
+                }
+                p{
+                    text-align: center;
+                    margin-top: .9375rem;
+                    font-weight: 100;
+                }
+                div{
+                    width: 100%;
+                height: 50%;
+                margin-top: 2rem;
+                    img{
+                        width: 100%;
+                        height: 100%;}}
+                    }
+            .arroz-verduras{
+                @extend .salsa-bolognesa
             };
-        .arroz-verduras{
-                @extend .humus
+            .milanesas-pure{
+                @extend .salsa-bolognesa
             };
-        .milanesas-pure{
-                @extend .humus
-            };
-        .tarta-atun{
-                @extend .humus
+            .tarta-atun{
+                @extend .salsa-bolognesa
             }
+            }
+        
+        }
+
+.dulces{
+    margin-bottom: 3.125rem;
+    .recetas-h2{
+        @include recetas-h2}
+    .container-cards-dulces{
+        @include flex(row,wrap,space-around,center,0rem);
+        .chocotorta{
+                width: 12.5rem;
+                height: 18.75rem;
+                border: .0625rem grey;
+                box-shadow: .3125rem .3125rem .3125rem grey;
+                text-align: center;
+                            &:hover{
+                scale: (1.1);}
+                h3{
+                    padding: .1875rem;
+                    color: #527853;
+                    text-decoration: underline;
+                }
+                p{
+                    text-align: center;
+                    margin-top: .9375rem;
+                    font-weight: 100;
+                }
+                div{
+                    width: 100%;
+                height: 50%;
+                margin-top: 2rem;
+                    img{
+                        width: 100%;
+                        height: 100%;}}
+        };
+        .crumble{
+            @extend .chocotorta
+        };
+        .flan{
+            @extend .chocotorta
+        };
+        .lemon-pie{
+            @extend .chocotorta
+        }
+    }   
+}
+
+.utensillos-section1{
+    height: 25rem;
+    background-image: url(../Assets/pasta.png);
+    @include background-image (no-repeat,cover, center,none);
+    @include flex (row,nowrap,center,center,0rem);
+    h1{
+        align-items: center;
+        font-family: 'Platypi';
+        font-size: 6.25rem;
+        color: rgb(66, 65, 65);
+        text-shadow: .125rem .125rem rgb(145, 144, 144);
+        -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                @-webkit-keyframes slide-in-left {
+                0% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                    opacity: 0;
+                }
+                    100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
+                }
+                @keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
+        }
+    
+}}
+
+.utensillos-section2{
+    background-image: url(../Assets/tabla1.jpg);
+    @include background-image (no-repeat,cover, left bottom,none);
+    height: 18.75rem;
+    p{
+        color: #D9D9D9;
+        font-size: 1.5625rem;
+        text-align: center;
+        top:40px;
+        position: relative;
+        padding: 1.25rem
+    }
+} 
+
+.utensillos-section3{
+    @include flex (column,nowrap,center,center,.625rem);
+    .container-utensillos-cuchillos{
+        border-bottom: .125rem solid grey;
+        border-radius: .3125rem;
+        box-shadow: .25rem .25rem .3125rem rgb(189, 185, 185);
+        height: 15.625rem;
+        width: 80%;
+        margin: .625rem;
+        display: flex;
+        .div-utensillos{
+            width: 70%;
+            padding: .625rem;
+            h2{
+                font-size: 2.5rem;
+                color:map-get($colores, color2 );
+                text-decoration: $subrayado;
+            }
+            p{ 
+                font-size: 1.25rem;
+                padding: .625rem;
+                margin-top: 1.25rem;
+            }
+        };
+        .utensillos-img{
+            float: right;
+            width: 15.625rem;
+            margin: .3125rem;
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+            
+        }
+    };
+    .container-utensillos-tablas{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-sartenes{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-fuentes{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-cucharones{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-espatula{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-colador{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-bowls{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-rallador{
+        @extend .container-utensillos-cuchillos
+    };
+    .container-utensillos-pinzas{
+        @extend .container-utensillos-cuchillos
+    };
+
+}
+
+.inspiracion-section1{
+    height: 31.25rem;
+    background: linear-gradient(90deg, rgba(238,114,20,1) 0%, rgba(247,183,135,1) 35%, rgba(249,232,217,1) 100%);
+    
+    @include flex(column,nowrap,center,center,3.125rem);
+    
+    h1{
+        font-family: 'Platypi';
+        font-size: 5rem;
+        color:#060606;
+        text-shadow: .125rem .125rem grey;
+        -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                @-webkit-keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                            transform: translateX(0);
+                    opacity: 1;
+                    }
+                }
+                @keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                    transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
+        }
+    p{
+        font-size: 1.25rem;
+        left: 3.125rem;
+        width: 90%;
+        line-height: 1.5625rem;
+    }
+}}
+
+.inspiracion-section2{
+
+
+    width: 100%;
+    height: 100%;
+    --s: 150px; 
+    --c1: #F7B787;
+    --c2: #EE7214;
+    --c3: #F9E8D9;
+    --c4: #527853;
+
+    background: conic-gradient(
+        from 45deg at 75% 75%,
+        var(--c3) 90deg,
+        var(--c1) 0 180deg,
+        #0000 0
+    ),
+    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg, #0000 0),
+    conic-gradient(from -45deg at 50% 100%, #0000 180deg, var(--c3) 0),
+    conic-gradient(
+        from -45deg,
+        var(--c1) 90deg,
+        var(--c2) 0 225deg,
+        var(--c4) 0);
+    background-size: var(--s) var(--s);
+
+
+    margin-top: 0rem;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    margin-bottom: -6.25rem;
+    .container-inspiracion{
+        height: 18.75rem;
+        width: 80%;
+        margin-bottom: 6.25rem;
+        margin-left: 3.125rem;
+        @include flex(row,nowrap,space-between,center,3.125rem);
+        .div-chef h2{
+            font-size: 1.875rem;
+            text-align: center;
+        }
+        .div-chef img{
+            margin-top: 1.875rem;
+            border: .125rem solid  rgb(66, 135, 66);
+            object-fit: contain;
+        }
+        p{
+            width: 50%;
+            height:12.5rem;
+            background-color:#F9E8D9;
+            padding: 3.125rem;
+            border: 1px solid rgb(175, 173, 173);
+            border-radius: 5%;
+            box-shadow: 2px 2px .3125rem rgb(193, 192, 192);
+            text-align: center;
+            margin-top: 2.5rem;
+        }
     }
 }
 
 
+.tecnicas-section1{
+    height: 37.5rem;
+    background-image: url(../Assets/tecnicas-portada.png);
+    @include background-image(no-repeat,cover,bottom,none);
+    @include flex(row,nowrap,center,center,0rem);
+    h1{
+        font-size: 5.3125rem;
+        color: #D9D9D9;
+
+
+            -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                @-webkit-keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                            transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                            transform: translateX(0);
+                    opacity: 1;
+                    }
+                }
+                @keyframes slide-in-left {
+                    0% {
+                    -webkit-transform: translateX(-1000px);
+                            transform: translateX(-1000px);
+                    opacity: 0;
+                    }
+                    100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                    }
+                }
+                
+                }
+    }
+
+
+.tecnicas-section2{
+    position: relative;
+    height: auto;
+    margin-bottom: 6.25rem;
+    .indice{
+        border: 1px solid rgb(131, 128, 128);
+        box-shadow: .125rem .125rem .3125rem grey;
+        background-color: rgb(209, 201, 201);
+        height: 31.25rem;
+        width: 18.75rem;
+        @include flex(column,nowrap,space-between,none,0rem);
+        padding: 1.25rem;
+        margin: 3.125rem;
+        h2{
+            margin-left: 2.5rem;
+            font-size: 2.1875rem;
+        }
+        ol{
+            margin-left: 1.25rem;
+            line-height: 2rem;
+            font-size: 1.25rem;
+            margin-bottom: 1.875rem;
+            padding: 1.25rem;
+            li{
+                a{color: black;
+                }
+                a:link {
+                    text-decoration: none;
+                    }
+                a:visited{
+                    text-decoration: none;
+            }
+        }}}
+    .huevos-png{
+        position: absolute;
+        left: 50rem;
+        top: -3.125rem;
+        width: 37.5rem;
+            img{
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+    }}
+
+    .cuchara-png{
+        position: absolute;
+        right: 3.125rem;
+        top: 3.125rem;
+        width: 50rem;
+        .cuchara-png img{
+            height: 100%;
+            width: 100%;
+        }}
+}
+
+
+.tecnicas-section3{
+    @include flex(column,nowrap,center,center,0rem);
+    height:auto;
+    margin-bottom: 12.5rem;
+    width: 90vw;
+    margin: auto;
+    .container-tecnicas{
+        height: 37.5rem;
+        display: flex;
+        width: 100%;
+        .div-hervir{
+            width: 50%;
+            height: 100%;
+            background-image: url(../Assets/hervir.png);
+            @include background-image(no-repeat,cover,none,none);
+            h2{
+                position:relative;
+                top:3.75rem;
+                left: 6.25rem;
+                font-size: 5rem;
+                color:#D9D9D9
+            }
+        };
+        .parrafo-hervir{
+            width: 50%;
+            height: 100%;
+            background-color: #527853;
+            p{
+                width: 80%;
+                position: relative;
+                top:6.25rem;
+                margin: auto;
+                font-size: 1.875rem;
+                line-height: 3.125rem
+            }
+        };
+        .div-saltear{
+            @extend .div-hervir;
+            background-image:url(../Assets/saltear.png);
+        };
+        .parrafo-saltear{
+            @extend .parrafo-hervir;
+            background-color:#EE7214;
+        };
+        .div-freir{
+            @extend .div-hervir;
+            background-image:url(../Assets/freir.png);
+        };
+        .parrafo-freir{
+            @extend .parrafo-hervir;
+            background-color:#F9E8D9;
+        };
+        .div-hornear{
+            @extend .div-hervir;
+            background-image:url(../Assets/hornear.png);
+        };
+        .parrafo-hornear{
+            @extend .parrafo-hervir;
+            background-color:#527853;
+        };
+        .div-brasear{
+            @extend .div-hervir;
+            background-image: url(../Assets/brasear.png);
+        };
+        .parrafo-brasear{
+            @extend .parrafo-hervir;
+            background-color:#EE7214;
+        };
+        .div-vapor{
+            @extend .div-hervir;
+            background-image: url(../Assets/vapor.png);
+        };
+        .parrafo-vapor{
+            @extend .parrafo-hervir;
+            background-color:#F9E8D9;
+        };
+        .div-blanquear{
+            @extend .div-hervir;
+            background-image: url(../Assets/blanquear.png);
+        };
+        .parrafo-blanquear{
+            @extend .parrafo-hervir;
+            background-color:#527853;
+        };
+        .div-gratinar{
+            @extend .div-hervir;
+            background-image: url(../Assets/gratinar.png);
+        };
+        .parrafo-gratinar{
+            @extend .parrafo-hervir;
+            background-color:#EE7214;
+        };
+        .div-asar{
+            @extend .div-hervir;
+            background-image: url(../Assets/asar.png);
+        };
+        .parrafo-asar{
+            @extend .parrafo-hervir;
+            background-color:#F9E8D9;
+        };
+        .div-guisar{
+            @extend .div-hervir;
+            background-image: url(../Assets/guisar.png);
+        };
+        .parrafo-guisar{
+            @extend .parrafo-hervir;
+            background-color:#F7B787;
+        };
+    } 
+}
+
+
+
+
+@import "./Layout/media/media1024";
+@import "./Layout/media/media768";
+@import "./Layout/media/media425";
+@import "./Layout/media/media375";
+@import "./Layout/media/media320";

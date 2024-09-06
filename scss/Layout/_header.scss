@@ -10,7 +10,10 @@ header{
     object-fit: contain;    
     width: 9.375rem;
     margin-left: .625rem;
-    margin-top: .625rem;
+    margin-top: 1.875rem;
+    &:hover{
+        scale: (1.2);
+    }
     img{
         width: 100%;
     }};
@@ -24,26 +27,16 @@ header{
                 margin-top: .3125rem;
                 font-size: 1.25rem;
                 padding: 1.25rem;
-                
-                
+                &:hover{
+                    scale: (1.2);
+                }
                     a{color: #fbfbfb;
                         }
-                    
                     a:link {
                         text-decoration: none;
-                        /*&:hover{
-                            transform: scale(1.2)};*/
                         }
-                        
-                    
-                    }
-                    
                     a:visited{
                         text-decoration: none;
-                    }
-
-                    }
-            }
-        }
+                    }}}}}
 
     

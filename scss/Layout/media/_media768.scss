@@ -1,0 +1,181 @@
+@media (max-width:768px) {
+
+    .navbar{
+        padding-right: .0625rem;
+        li a{
+            font-size: 1rem;    
+        }
+    }}
+
+@media (max-width:768px) {
+        .tortilla{
+            width: 15.625rem;
+            padding: 1.25rem;
+        }}
+
+@media (max-width:768px){
+
+        .inspiracion-section1{
+                h1{
+                    font-size: 3.125rem} ;
+                p{
+                    left: 0rem;
+                    bottom: -0.625rem;
+                    position: relative;
+                };
+            } 
+        .inspiracion-section2{
+            .container-inspiracion{
+            height: 16.875rem;
+            width: 100%;
+            justify-content: space-around;
+            margin: auto;
+            margin-bottom: 1.875rem;
+            .div-chef{
+                height: 15.625rem;
+                h2{
+                    font-size: 1.25rem;
+                }
+                img{
+                    width: 10.625rem;
+                    margin-left: 1.25rem;
+                }
+            }
+            p{
+            margin-top: 3rem;
+    }
+}}}
+
+@media (max-width:768px){
+    .tecnicas-section1{
+        h1{
+            text-align: center;
+        }
+    }
+    .tecnicas-section2{
+        height: 43.75rem;
+        .cuchara-png{
+            position: relative;
+            top:-40rem; 
+            left: 21.875rem;
+            height: 25rem;
+            width: 21.875rem;
+            img{
+                object-fit: contain;
+                width: 25rem;} 
+        };
+        .huevos-png{
+            position: relative;
+            top: -31.2rem;
+            left:25rem;
+            width: 18.75rem;
+            img{
+                object-fit: contain;
+            }}}
+    .tecnicas-section3{
+        .container-tecnicas{
+                height: 18.75rem;
+                .div-saltear{
+                    h2{
+                        left: 0rem;
+                        width: 100%;
+                    }}
+                .div-blanquear{
+                    h2{
+                        left: .3125rem;
+                        font-size: 3.75rem;
+                        width: 100%;
+                    }}
+                .div-gratinar{
+                    h2{
+                        left: .3125rem;
+                        width: 100%;
+                    }}
+                .div-hornear{
+                    h2{
+                        left: .125rem;
+                        top:0rem;
+                        width: 100%;
+                    }}
+                .div-brasear{
+                    h2{
+                        left: 3.125rem;
+                        width: 100%;
+                    }}
+                .div-vapor{
+                    h2{
+                        left: 0rem;
+                        width: 100%;
+                    }}
+                .div-guisar{
+                    h2{
+                        left: 0rem;
+                        width: 100%;
+                    }}
+                .parrafo-hervir{
+                    p{
+                        line-height: 1.875rem;
+                        font-size: 1.25rem;
+                        top: 2rem;
+                    }
+                }
+            }}}
+
+@media (max-width:768px){
+                .section4{
+                    .especias{
+                        width: 14.375rem;
+                    }
+                }
+                .section5{
+                    height: auto;
+                    .tips{
+                        display: grid;
+                        grid-template-columns: 40% 40%;
+                        grid-template-rows: 18.75rem 18.75rem;
+                        grid-template-areas: 
+                        's1 s2'
+                        's3 s4';
+                        .tip1{
+                            grid-area: s1;
+                        }
+                        .tip2{
+                            grid-area: s2;
+                        }
+                        .tip3{
+                            grid-area: s3;
+                        }
+                        .tip4{
+                            grid-area: s4;
+                        }
+                        
+                        gap: 20px;
+                        justify-content: center;
+                        margin: auto;
+                        justify-items: center;
+                    }}} 
+
+@media (max-width:768px){          
+        .cositas{
+            .container-cards-cositas{
+                margin: 3.125rem;
+                @include flex(row,wrap,space-around,center,100px);
+            }}
+        .salados{
+            .container-cards-salados{
+                margin: 3.125rem;
+                @include flex(row,wrap,space-around,center,100px);
+            }};
+        .dulces{
+            .container-cards-dulces{
+                margin: 3.125rem;
+                @include flex(row,wrap,space-around,center,100px);
+        }}}
+
+        @media (max-width:768px){
+            .utensillos-section1{
+                h1{
+                    font-size: 4.6875rem;
+                }}}
+
+    

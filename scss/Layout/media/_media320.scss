@@ -1,0 +1,138 @@
+@media (max-width:320px) {
+
+    header{
+        height: 18.75rem;
+        .logo{
+            width: 4.6875rem;}
+        nav{
+        height: 100%;
+        .navbar{
+            @include flex(column,nowrap,center,flex-start,0px);
+            padding: 0rem;
+            height: 100%;
+            font-size: 1rem;
+            li{
+                padding: .125rem;
+                line-height: 1.5625rem
+                };
+                }}}}
+
+@media (max-width:320px) {
+        footer{
+            height: 15.625rem;
+            margin-top: 6.25rem;
+            div{
+                padding: 1.25rem;
+            }
+            .tortilla{
+                width: 12.5rem;
+                bottom: .3125rem;
+        }}}
+
+
+@media (max-width:320px){
+
+    .utensillos-section1 h1{
+        font-size: 2rem; }
+    .utensillos-section2{
+            height: 15.625rem;
+            p{
+                font-size: 1rem;
+                padding: 1.25rem;
+            }
+        }
+    .utensillos-section3{
+        margin-top: 1.875rem;
+        .container-utensillos-cuchillos{
+            width: 90%;
+            height: 26.875rem;
+            @include flex(column,nowrap,space-between,center,1.25rem);
+            .div-utensillos{
+                h2{
+                    margin: .1875rem;
+                }
+            }
+            .utensillos-img{
+                width: 15.625rem;
+                img{
+                    object-fit: contain;
+                }
+            }
+            }
+    }}
+
+    @media (max-width:320px){
+
+        .inspiracion-section1 {
+            height: 46.875rem;
+            h1{
+            font-size: 2.1875rem;
+            margin-left: .625rem;
+            margin-top: -4.375rem;}
+            p{
+                font-size: 1rem;
+                margin-top: 4.375rem;
+            }}
+        .inspiracion-section2{
+            .container-inspiracion{
+                @include flex(column,nowrap,center,center,0rem);
+                margin-bottom: 1.875rem;
+                margin-top: 1.875rem;
+                height: 34.375rem;
+                width: 100%;
+                p{
+                    width: 96%;
+                    height: 84.375rem;
+                    font-size: 1rem;
+                }
+    }}}
+
+
+@media (max-width:320px){
+    .tecnicas-section2{
+        .indice{
+            height: 21.875rem;
+            width: 12.5rem;
+            ol{
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }}}
+    .tecnicas-section3{
+        .container-tecnicas{
+            .div-hervir{
+            h2{
+                font-size: 3.75rem;
+            }}
+            .parrafo-hervir{
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    }
+
+@media (max-width:320px){
+            .section1{
+                .olor{
+                    font-size: 3.875rem;
+                }
+            }
+            .section4{
+            grid-template-rows: 12.5rem 10rem 31.25rem 84.375rem 20rem;
+        }}
+            .section4{
+                h3{
+                    margin-left: 1.875rem;
+                }
+                .aji{
+                    margin-left: 2.5rem;
+                }
+            }
+
+@media (max-width:320px){
+                .recetassection1{
+                    div{
+                        h1{
+                        font-size: 3.4375rem;
+                    }}}}

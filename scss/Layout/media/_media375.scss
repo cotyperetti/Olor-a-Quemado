@@ -1,0 +1,43 @@
+@media (max-width:375px){
+    .utensillos-section2{
+        height: 15.625rem;
+        p{
+            font-size: 1rem;
+            padding: 1.25rem;
+        }
+    }}
+
+@media (max-width:375px){
+
+        .inspiracion-section1 {
+            height: 41.875rem;
+            h1{
+            font-size: 2.5rem;
+            margin-left: .625rem;}
+            p{
+                font-size: 1rem;
+                margin-bottom: 1.25rem;
+            }}}
+
+@media (max-width:375px){
+        .section1{
+            .olor{
+                font-size: 4.375rem;
+                    }}
+        .section4{
+            grid-template-rows: 12.5rem 17rem 31.25rem 84.375rem 6.25rem;
+            .especias{
+                width: 12.5rem;
+            }
+            .tenedor{
+                width: 12.5rem;
+                height: 4.375rem;
+            }
+        }}
+
+@media (max-width:375px){
+            .recetassection1{
+                div{
+                    h1{
+                    font-size: 4.0625rem;
+                }}}}
