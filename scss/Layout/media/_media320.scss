@@ -35,7 +35,7 @@
     .utensillos-section1 h1{
         font-size: 2rem; }
     .utensillos-section2{
-            height: 15.625rem;
+            height: 18.75rem;
             p{
                 font-size: 1rem;
                 padding: 1.25rem;
@@ -45,7 +45,7 @@
         margin-top: 1.875rem;
         .container-utensillos-cuchillos{
             width: 90%;
-            height: 26.875rem;
+            height: 30rem;
             @include flex(column,nowrap,space-between,center,1.25rem);
             .div-utensillos{
                 h2{
@@ -64,7 +64,7 @@
     @media (max-width:320px){
 
         .inspiracion-section1 {
-            height: 46.875rem;
+            height: 37.5rem;
             h1{
             font-size: 2.1875rem;
             margin-left: .625rem;

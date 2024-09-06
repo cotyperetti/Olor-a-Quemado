@@ -779,6 +779,10 @@
         .div-freir{
             @extend .div-hervir;
             background-image:url(../Assets/freir.png);
+            h2{
+                color:#060606
+
+            };
         };
         .parrafo-freir{
             @extend .parrafo-hervir;
@@ -811,6 +815,10 @@
         .div-blanquear{
             @extend .div-hervir;
             background-image: url(../Assets/blanquear.png);
+            h2{
+                color:#060606
+
+            };
         };
         .parrafo-blanquear{
             @extend .parrafo-hervir;
@@ -819,6 +827,10 @@
         .div-gratinar{
             @extend .div-hervir;
             background-image: url(../Assets/gratinar.png);
+            h2{
+                color:#060606
+
+            };
         };
         .parrafo-gratinar{
             @extend .parrafo-hervir;
